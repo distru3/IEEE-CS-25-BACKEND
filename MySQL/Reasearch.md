@@ -54,3 +54,31 @@ there are many rankings to differant db's but here is what i found to be the mos
 - [What is PostgreSQL?](https://www.postgresql.org/about/)
 
 - [MongoDB](https://en.wikipedia.org/wiki/MongoDB)
+
+## task2
+
+- **"What is RDBMS?":**
+
+  this really doesn't need a lot of explaination as we are using one right now to solve the tasks which is MySQL, basically it's the collection of programs and capabilities used to enable us to enteract with relational databases being editing it updating it or even creating it (relational databases is a type of database that stores data related to each other)
+
+- **RDBMS VS DBMS:**
+  as we can figure from it's name, a Database Management system or DBMS for short is a system that is used to manage the flow of the data as it goes in in the database
+
+  > Database management system, as the name suggests, is a management system that is used to manage the entire flow of data, i.e, the insertion of data or the retrieval of data, how the data is inserted into the database, or how fast the data should be retrieved, so DBMS takes care of all these features, as it maintains the uniformity of the database as well does the faster insertions as well as retrievals.
+
+  --w3school
+
+  Relational Database Management Systems though as the name suggests too deals with the relations of the data to eachother, having schemas and tuples to help arrange data and in the proccess reducing data redundancy.
+  ![alt text](image.png)
+
+- **Naming conventions:**
+  it's a set of rules that should be upplied when choosing chrachter sequences, basically the way you want to name things and how they should look being unified, let's say when working on a project with a team or so, to make things easier to understand and much more readable.
+  let's take Multiple word identifiers as an example, lets say you are programing with c++ (or like 99% of programing languages) there will come times where you want to name a variable with two words rather than one to make things easier to understand let's take "Employee id" as an example, in c++, those two words cant be seperated by a space, so without altring the way we right it would look somthing like "employeeid" which might be hard to read and understand so other developers when they look through the code they might get a little confused whlie navagating it, so it's best practice to change the way you write them using ways like: camelCase, snake_case, camel_Snake_Case, kebab-case, Train-Case, and many more (p.s the way of typing two words like "employeeid" in this way is called **"flatcase"** which is highly advisable to avoid while choosing the rules for writing characters).
+
+**Sources**
+
+- [What is data management and why is it important? Full guide](https://www.techtarget.com/searchdatamanagement/definition/RDBMS-relational-database-management-system)
+
+- [Difference Between RDBMS and DBMS](http://geeksforgeeks.org/difference-between-rdbms-and-dbms/)
+
+- [Naming convention (programming)](<https://en.wikipedia.org/wiki/Naming_convention_(programming)>)
