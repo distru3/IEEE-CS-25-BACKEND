@@ -82,3 +82,89 @@ there are many rankings to differant db's but here is what i found to be the mos
 - [Difference Between RDBMS and DBMS](http://geeksforgeeks.org/difference-between-rdbms-and-dbms/)
 
 - [Naming convention (programming)](<https://en.wikipedia.org/wiki/Naming_convention_(programming)>)
+
+## task 3
+
+- **primary keys vs unique keys:**
+
+  **primary keys**: these are keys that identify each row in the table and their value can never be duplicate nor null as with this unique value as i said the row is identified
+
+  **unique keys**: these however are as the name suggests values that are unique to each row, not necessarily used as an identifier for the row but it's a value that must be differant from one row to the other, and it can have one null value
+
+  **a table can have multiple unique keys but only one primary key**
+
+  for a better comparisson:
+
+  ![alt text](image-1.png)
+
+- **constraints in MySQL:**
+
+  used to specify rules to controll what value will be stored in the table, these help ensure data accuracy and integrity, these come in handy when you want to store the data in a certain type of way or restricting other ways of storing
+
+  and there are **two** types:
+
+  **Column Level Constraints:** These constraints are applied only to the single column that limits the type of particular column data.
+
+  **Table Level Constraints:** These constraints are applied to the entire table that limits the type of data for the whole table.
+
+  for example we have: NOT NULL, UNIQUE, DEFAULT
+
+  **NOT NULL** is used to prevent null or empty data from being stored in the column
+
+  **UNIQUE** is used to prevent duplicate values in a single column
+
+  **DEFAULT** is used to store a specified default value if a value was not stored in a column
+
+- **indexing in MySQL:**
+
+  Indexes are used to find rows with specific column values quickly. Without an index, MySQL must begin with the first row and then read through the entire table to find the relevant rows. The larger the table, the more this costs
+
+  > An index is a data structure that improves the speed of operations on a database table. They are a special type of lookup tables pointing to the data.
+
+  --Tutorialspoint
+
+  **Types of MySQL Indexes**
+
+  - Simple Index
+
+  - Unique Index
+
+  - Primary Key Index
+
+  - Fulltext Index
+
+  - Descending Index
+
+  in short, think of indexing as a way to make accessing rows much easier and less costly by accessing the row directly through certain indexes
+
+- **Difference between MySQL and Postgresql**
+
+  both offer many of the same features and differences cant really be noticed on the surface level, diving more deeper however and working on huge projects with them is where we can start to see stuff:
+
+  MySQL is preferred for managing read-only commands. It is not preferred when concurrency is required.
+
+  PostgreSQL is preferred for managing read-write operations, large datasets, and complex queries. But it’s not preferred for read-only operations.
+
+  MySQL offers fewer features than PostgreSQL, but this allows MySQL to stay lighter, more stable, and faster at processing—especially when it comes to read-only queries.
+
+  PostgreSQL was built to be ACID-compliant from the ground up and it’s optimal when concurrent transactions (MVCC) are required, but it is slower and less stable when it comes to read-only operations.
+
+  MySQL is highly compatible with many different types of data storage engines. Whereas PostgreSQL is highly compatible with many different NoSQL formats.
+
+  here are some features to see if one or both support them:
+
+  ![alt text](image-2.png)
+
+  and these are some use cases with a suggestion for which one is better as an option:
+
+  ![alt text](image-3.png)
+
+**Sources**
+
+- [Difference between Primary key and Unique key](https://www.geeksforgeeks.org/difference-between-primary-key-and-unique-key/)
+
+- [MySQL Constraints](https://www.tpointtech.com/mysql-constraints)
+
+- [MySQL - INDEXES](https://www.tutorialspoint.com/mysql/mysql-indexes.htm)
+
+- [PostgreSQL vs MySQL: The Critical Differences - Integrate.io](https://www.integrate.io/blog/postgresql-vs-mysql-which-one-is-better-for-your-use-case/#:~:text=PostgreSQL%20is%20preferred%20for%20managing,comes%20to%20read%2Donly%20queries.)
