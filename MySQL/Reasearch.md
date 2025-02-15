@@ -168,3 +168,53 @@ there are many rankings to differant db's but here is what i found to be the mos
 - [MySQL - INDEXES](https://www.tutorialspoint.com/mysql/mysql-indexes.htm)
 
 - [PostgreSQL vs MySQL: The Critical Differences - Integrate.io](https://www.integrate.io/blog/postgresql-vs-mysql-which-one-is-better-for-your-use-case/#:~:text=PostgreSQL%20is%20preferred%20for%20managing,comes%20to%20read%2Donly%20queries.)
+
+## task 4
+
+- **Relations (one to one, one to many, many to many):**
+
+  they define how tables are connected to each other, having relations essentially helps orgnize the data across multiple tables which can result in efficient data retrival and maintenance
+
+  lets get to the types
+
+  - **One-to-One:** Each record in Table A is associated with one and only one record in Table B, and vice versa, for example we can have a user table and a user_profiles table: the relation between those tables is that a user in the user table has only one profile in the user_profile table both being linked with what is called "foreign key" being in one table and refrencing a primary key in the other
+
+  - **One-to-Many:** Each record in Table A can be associated with multiple records in Table B, but each record in Table B is associated with only one record in Table A, and if we apply that logic to the last example we can figure that a user from the user table can be linked to multiple profiles in the user_profile table but the same cant be said to the profiles as it can only be linked to one user(there is another type called many to one but it's basically the same comcept but flipped so i won't bother in explaining it)
+
+  - **Many-to-Many**: Each record in Table A can be associated with multiple records in Table B, and vice versa, for this let's consider three tables a table for students and their info, a table for courses and their info, and lastly one called student_courses where it links multiple students to multiple courses from their corresponding tables as a student can enroll in multiple courses and a course can be assigned to multiple students
+
+- **Write-ahead logging:**
+
+  this is a method to basically insure data reliability and integrity, and the core concept for it is to write the changes in a log before actually commiting them to the datafiles, this can help in case of disasters occuring where data can be damaged where we can replay the logs to return it to it's last state, this concept is applyed to a lot of bussinesses and not just data oriented bussinesses.
+
+- **What are normalization and denormalization and their differences:**
+
+  Normalization and denormalization are two key concepts in database design, each serving a specific purpose,The goal of normalization is to minimize data redundancy and dependency by organizing data into well-structured tables, on the other hand Denormalization involves combining tables that have been normalized to improve query performance and simplify data retrieval and the choice to chose between those differs on the requirements for the data
+
+  benefits for normalization include:
+
+  - Reduced redundancy: Normalization minimizes data duplication by storing information only once. This reduces storage requirements and improves efficiency.
+
+  - Improved data integrity: By eliminating anomalies such as insertion, update, and deletion anomalies, normalized data ensures that the database remains accurate and consistent.
+
+  - Enhanced consistency: Normalization enforces consistency in data representation across tables, leading to a more coherent and standardized database structure.
+
+  - Easier updates: Updates to the database are simplified because changes only need to be made in one place. This reduces the likelihood of inconsistencies arising from incomplete or conflicting updates.
+
+  - Simplified querying: Queries become more straightforward and efficient as data is organized logically into related tables, allowing for easier retrieval of specific information.
+
+  benefits for denormalization include:
+
+  - Optimized data retrieval: Denormalization aims to improve query performance by minimizing the number of joins needed to retrieve data. This is particularly beneficial in situations where complex queries are executed frequently.
+
+  - Simplified data analysis: Analytical tasks and reporting can be simplified with denormalized data because all relevant information is stored in one place. This makes it easier to generate reports and perform data analysis without the complexity of navigating through multiple tables.
+
+**Sources**
+
+- [Denormalized vs. Normalized Data - Pure Storage Blog](https://blog.purestorage.com/purely-educational/denormalized-vs-normalized-data/#:~:text=The%20goal%20of%20normalization%20is,performance%20and%20simplify%20data%20retrieval.)
+
+- [How does the database guarantee reliability using write-ahead logging?](https://www.youtube.com/watch?v=wI4hKwl1Cn4&t=97s)
+
+- [What Write Ahead Logging Is and Why It Matters](https://www.sqlservercentral.com/editorials/what-write-ahead-logging-is-and-why-it-matters)
+
+- [Relationships in SQL - One-to-One, One-to-Many, Many-to-Many.](https://www.geeksforgeeks.org/relationships-in-sql-one-to-one-one-to-many-many-to-many/)
