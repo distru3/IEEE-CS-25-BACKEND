@@ -218,3 +218,32 @@ there are many rankings to differant db's but here is what i found to be the mos
 - [What Write Ahead Logging Is and Why It Matters](https://www.sqlservercentral.com/editorials/what-write-ahead-logging-is-and-why-it-matters)
 
 - [Relationships in SQL - One-to-One, One-to-Many, Many-to-Many.](https://www.geeksforgeeks.org/relationships-in-sql-one-to-one-one-to-many-many-to-many/)
+
+**Project erd:**
+
+![alt text](erd.png)
+
+**task 5**
+
+- **Multi-version concurrency Control**
+
+  Multi-Version Concurrency Control is a technology, utilized to enhance databases by resolving concurrency problems and also data locking by preserving older database versions. When many tasks attempt to update the same piece of data simultaneously, MVCC causes a conflict and necessitates a retry from one or more of the processes.
+
+  - Timestamp-based MVCC: The data visibility to transactions is defined by the unique timestamp assigned to each transaction that creates a new version of a record.
+  - Snapshot-based MVCC: This utilizes the database snapshot that is created at the beginning of a transaction to supply the information that is needed for the transaction.
+  - History-based MVCC: This Keeps track of every modification made to a record, making transaction rollbacks simple.
+  - Hybrid MVCC: This coordinates data flexibility and performance by combining two or more MVCC approaches
+
+- **Triggers**
+
+  SQL triggers are a critical feature in database management systems (DBMS) that provide automatic execution of a set of SQL statements when specific database events, such as INSERT, UPDATE, or DELETE operations, occur. Triggers are commonly used to maintain data integrity, track changes, and enforce business rules automatically, without needing manual input.
+
+- **How can you take the backup of a database?:**
+
+  using the BACKUP DATABASE in sql (not sure if this is what the question asks but this is all i can find :-] )
+
+**Sources**
+
+- [What is Multi-Version Concurrency Control (MVCC) in DBMS?](https://www.geeksforgeeks.org/what-is-multi-version-concurrency-control-mvcc-in-dbms/)
+- [SQL Trigger](https://www.geeksforgeeks.org/sql-trigger-student-database/)
+- [SQL BACKUP DATABASE for SQL Server](https://www.w3schools.com/sql/sql_backup_db.asp)
