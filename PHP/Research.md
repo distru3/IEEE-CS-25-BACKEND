@@ -51,7 +51,40 @@
 
   Examples: Perl, Ruby, Python, PHP, JavaScript, Erlang
 
+- **Assign by Value VS Assign by Reference.**
+
+  basically, if we assign a variable by it's **value** to another variable only the value of that variable is passed to the other variable meaning any changes in either of the variables will not resault in a change in the other, assigning by **referance** however will make it so any change in any of the variables values will apply to all of the variables refrencing eachother
+
 **sources**
 
 - [What is the difference between statically typed and dynamically typed languages?](https://stackoverflow.com/questions/1517582/what-is-the-difference-between-statically-typed-and-dynamically-typed-languages)
 - [Scripting and Programming Languages: Differences, Advantages, and Optimal Use Cases](https://www.unosquare.com/blog/scripting-and-programming-languages-differences-advantages-and-optimal-use-cases/#:~:text=Scripting%20languages%20are%20used%20for,systems%20and%20enterprise%2Dlevel%20software.)
+
+# Task 3
+
+- **What is the difference between for and foreach loop in PHP?**
+
+  the **for** loop is an iterative loop that repeats a block of code in its scope till a certain condition is met, not nessecarly looping on elements of an array but you can in theory do that if you want but it is commonly used for executing a code a number of times
+
+  here are some of it's charachteristics:
+
+  - Initialization: It is used to initialize the iterator variables. It also helps execute them one at a time without running the conditional statement at the beginning of the loop's condition.
+  - Condition: This statement is executed and if the condition returns a True value, the loop continues and the statements within it are executed. If the condition gives a False value, the execution comes out of the loop.
+  - Increment: It increments/increases the counter in the loop. It is executed at the end of every iteration without a break.
+  - It doesn't hide the iteration.
+  - It is complex in comparison to 'foreach' loop.
+  - It takes more time to execute in comparison to 'foreach' loop.
+
+  the **foreach** on the other hand is the correct way to iterate over elements of the array, it loops over the array elements applying a certain code to each element untill it reaches the end of the array then stops
+
+  here are some of it's charachteristics:
+
+  - It iterates over the elements of the array data structure.
+  - It hides the iteration.
+  - It is simple.
+  - It performs better in comparison to 'for' loop.
+  - It takes less time for the iteration.
+
+**Sources**
+
+- [Difference Between For and Foreach in PHP](https://www.tutorialspoint.com/difference-between-for-and-foreach-in-php)
