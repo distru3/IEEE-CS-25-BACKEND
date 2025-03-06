@@ -88,3 +88,37 @@
 **Sources**
 
 - [Difference Between For and Foreach in PHP](https://www.tutorialspoint.com/difference-between-for-and-foreach-in-php)
+
+# Task 4
+
+- **Sessions vs. Cookies**
+
+  **Cookies** are small pieces of data stored in the user’s browser. They help remember things like login status or preferences even after closing the website.
+
+  **Sessions** store user data on the server, making them more secure and ideal for storing temporary or sensitive information.
+
+- **Error Handling in PHP.**
+
+  Generally, there are two ways to handle errors:
+
+  - Using die() method
+  - Custom Error Handling
+
+  **using die()** is the basic way for handeling errors in php, you do a condition that if met (it being the error case) we run the die() function which accepts a message as a parameter and desplays it as the error and exits the script
+
+  **Custom Error Handling** though involves creating our own function that can be called when an error is called, this allows us to display to the user a more specified message regarding the error allowing for an easier error recognition and correction
+
+- **How PHP Executes Code.**
+
+  PHP code execution involves four stages: Lexing, Parsing, Compilation, and Interpretation. Each stage is crucial in the process of converting PHP source code into machine-readable code.
+
+  - Lexing, or tokenizing, is the process of turning a string (PHP source code) into a sequence of tokens. Each token is a named identifier for the value it has matched. This stage also stores the lexeme and the line number of the matched token.
+  - The Parsing stage verifies the validity of the token order and generates the abstract syntax tree (AST). The AST is a tree view of the source code used during the Compilation stage.
+  - The Compilation stage emits opcodes by traversing the AST and performs optimizations like resolving function calls with literal arguments and folding constant mathematical expressions. The output of this stage can be inspected using OPcache, VLD, and PHPDBG.
+  - The Interpretation stage is the final stage where the opcodes are run on the Zend Engine (ZE) VM. The output of this stage is what your PHP script outputs via commands such as echo, print, var_dump, etc
+
+**Sources**
+
+- [Difference Between Session and Cookies](https://www.geeksforgeeks.org/difference-between-session-and-cookies/)
+- [Error handling in PHP](https://www.geeksforgeeks.org/error-handling-in-php/)
+- [How PHP Executes – from Source Code to Render](https://www.sitepoint.com/how-php-executes-from-source-code-to-render/#:~:text=PHP%20code%20execution%20involves%20four,into%20a%20sequence%20of%20tokens.)
