@@ -29,7 +29,7 @@
 
   Traits are a mechanism for code reuse in single inheritance languages such as PHP. A Trait is intended to reduce some limitations of single inheritance by enabling a developer to reuse sets of methods freely in several independent classes living in different class hierarchies. The semantics of the combination of Traits and classes is defined in a way which reduces complexity, and avoids the typical problems associated with multiple inheritance and Mixins.
 
-## DISCLAIMER
+## NOTE
 
 i forgot to include the sources in the initial commit so here they are on 3:40 pm 3/14/25
 
