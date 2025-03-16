@@ -35,3 +35,45 @@
 - [Interfaces and Polymorphism in PHP - Practical Guide](https://dev.to/saravanasai/interfaces-and-polymorphism-in-php-practical-guide-pfc)
 - [PHP OOP - Interfaces](https://www.w3schools.com/php/php_oop_interfaces.asp)
 - [Traits](https://www.php.net/manual/en/language.oop5.traits.php)
+
+## Task 2
+
+- **Late static binding & how it works**
+
+  late static bindings work by storing the class named in the last "non-forwarding call". In case of static method calls, this is the class explicitly named (usually the one on the left of the :: operator); in case of non static method calls, it is the class of the object. A "forwarding call" is a static one that is introduced by self::, parent::, static::, or, if going up in the class hierarchy, forward_static_call(). The function get_called_class() can be used to retrieve a string with the name of the called class and static:: introduces its scope.
+
+- **Using OOP with MySQL (PDO & MySQLi)**
+
+  doing my reasearch i found out some diffrences between the two, the main difference is that PDO can be more flexable as it supports multiple databases and eases the transition from one to another while mysqli only uses MySQLanother thing is that MySQLI allows procedural and object-oriented styles in coding while PDO only allows for OOP and errors in PDO are only handeled in exceptions, so it probably sums up to if you want to try diffrent databases the choice is PDO but if you're just gonna use MySQL just use MySQLI
+
+- **Factory Pattern Anonymous Classes**
+
+  The **Factory Method Design Pattern** is a creational design pattern that provides an interface for creating objects in a superclass, allowing subclasses to alter the type of objects that will be created. This pattern is particularly useful when the exact types of objects to be created may vary or need to be determined at runtime, enabling flexibility and extensibility in object creation.
+
+  **Anonymous classes** are classes without a name that are instantiated immediately. They are useful when you need a one-time-use class without polluting the global namespace.
+
+  so to make things easier when we want to make objects of the same parent class but of different types, insteed of making a class for each type we make an Anon class in the parent making the parent a "Factory-Like" entity
+
+- **Anonymous Classes**
+
+  im now relizing that the research task above was probably a typo and i was spinning in a circle trying to think what that meant for absolutly no reason
+
+  **: |**
+
+  thanks a lot
+
+  anyway
+
+  to continue the definition above basically if you want to creat an object for a limited use and dont wanna put unnessesary code in the code use an anon class
+
+- **MVC Architecture**
+
+  The Model-View-Controller (MVC) framework is an architectural/design pattern that separates an application into three main logical components Model, View, and Controller. Each architectural component is built to handle specific development aspects of an application. It isolates the business logic and presentation layer from each other. It was traditionally used for desktop graphical user interfaces (GUIs). Nowadays, MVC is one of the most frequently used industry-standard web development frameworks to create scalable and extensible projects. It is also used for designing mobile apps.
+
+**Sources**
+
+- [Late Static Bindings ¶](https://www.php.net/manual/en/language.oop5.late-static-bindings.php)
+- [mysqli or PDO - what are the pros and cons? [closed]](https://stackoverflow.com/questions/13569/mysqli-or-pdo-what-are-the-pros-and-cons)
+- [Anonymous classes ¶](https://www.php.net/manual/en/language.oop5.anonymous.php)
+- [Factory method Design Pattern](https://www.geeksforgeeks.org/factory-method-for-designing-pattern/)
+- [MVC Framework Introduction](https://www.geeksforgeeks.org/mvc-framework-introduction/)
