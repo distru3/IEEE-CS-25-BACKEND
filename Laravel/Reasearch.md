@@ -34,3 +34,29 @@
 - [Facades](https://laravel.com/docs/11.x/facades)
 - [Life Cycle of a HTTP Request](https://requestly.com/blog/life-cycle-of-a-http-request/)
 - [Laravel Routing Guide – How to Create Route to Call a View](https://www.cloudways.com/blog/routing-in-laravel/)
+
+## Task2
+
+- **Blade Templates and how it works**
+  Blade is the simple, yet powerful templating engine that is included with Laravel. Unlike some PHP templating engines, Blade does not restrict you from using plain PHP code in your templates. In fact, all Blade templates are compiled into plain PHP code and cached until they are modified, meaning Blade adds essentially zero overhead to your application. Blade template files use the `.blade.php` file extension and are typically stored in the `resources/views` directory.
+
+- **What is the ORM ,why it is so useful**
+
+  ORM (Object-Relational Mapping) is a technique that allows developers to interact with a database using object-oriented programming instead of writing raw SQL queries. Laravel's ORM, Eloquent, simplifies database operations by providing an intuitive, expressive syntax for defining relationships, querying data, and performing CRUD operations. This abstraction improves productivity, reduces boilerplate code, and ensures maintainability.
+
+  **Benefits**:
+
+  - Simplifies database interactions.
+  - Reduces SQL query complexity.
+  - Enhances code readability and maintainability.
+  - Supports relationships like one-to-one, one-to-many, etc.
+
+  **Example**:
+
+  ```php
+  // Fetch all users
+  $users = User::all();
+
+  // Create a new user
+  User::create(['name' => 'John Doe', 'email' => 'john@example.com']);
+  ```
