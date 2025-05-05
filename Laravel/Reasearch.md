@@ -60,3 +60,69 @@
   // Create a new user
   User::create(['name' => 'John Doe', 'email' => 'john@example.com']);
   ```
+
+## Task 3
+
+- **Defining relationships in Eloquent models**
+
+  Eloquent allows defining relationships between models, such as `hasOne`, `hasMany`, `belongsTo`, and `belongsToMany`. These relationships enable intuitive querying and data manipulation, reflecting database associations directly in your code.
+
+  **Example**:
+
+  ```php
+  // User has many posts
+  public function posts() {
+      return $this->hasMany(Post::class);
+  }
+  ```
+
+- **Attaching, syncing, detaching related records**
+
+  Eloquent provides methods to manage relationships between models. You can attach, sync, or detach related records in many-to-many relationships using methods like `attach()`, `sync()`, and `detach()`.
+
+  **Examples**:
+
+  ```php
+  // Attach a role to a user
+  $user->roles()->attach($roleId);
+
+  // Sync roles for a user (removes existing and adds new ones)
+  $user->roles()->sync([$roleId1, $roleId2]);
+
+  // Detach a role from a user
+  $user->roles()->detach($roleId);
+  ```
+
+**The N+1 Query Problem in Laravel**
+
+The N+1 query problem occurs when your application executes one query to retrieve the main data and then executes additional queries for each related record. This can lead to performance issues due to the high number of database queries.
+
+**Example**:
+
+```php
+// N+1 problem: Fetching posts and their authors
+$posts = Post::all();
+foreach ($posts as $post) {
+  echo $post->author->name;
+}
+```
+
+**Solution**:
+
+To avoid this, use Eloquent's `with()` method to eager load relationships, reducing the number of queries.
+
+```php
+// Eager loading to solve N+1 problem
+$posts = Post::with('author')->get();
+foreach ($posts as $post) {
+  echo $post->author->name;
+}
+```
+
+Eager loading ensures related data is fetched in fewer queries, improving performance. problem in Laravel\*\*
+
+**Sources**
+
+- [Eloquent: Relationships](https://laravel.com/docs/10.x/eloquent-relationships)
+- [Understanding Sync, Attach and Detach in Laravel: Managing Relationships with Eloquent](https://medium.com/@rajvir.ahmed.shuvo/understanding-sync-attach-and-detach-in-laravel-managing-relationships-with-eloquent-394a7cf7fabd)
+- [N+1 Query Problem in Laravel: Causes, Effects, and Solutions](https://medium.com/@moumenalisawe/n-1-query-problem-in-laravel-causes-effects-and-solutions-740cefa44306)
