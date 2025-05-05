@@ -93,33 +93,33 @@
   $user->roles()->detach($roleId);
   ```
 
-**The N+1 Query Problem in Laravel**
+- **The N+1 Query Problem in Laravel**
 
-The N+1 query problem occurs when your application executes one query to retrieve the main data and then executes additional queries for each related record. This can lead to performance issues due to the high number of database queries.
+  The N+1 query problem occurs when your application executes one query to retrieve the main data and then executes additional queries for each related record. This can lead to performance issues due to the high number of database queries.
 
-**Example**:
+  **Example**:
 
-```php
-// N+1 problem: Fetching posts and their authors
-$posts = Post::all();
-foreach ($posts as $post) {
+  ```php
+  // N+1 problem: Fetching posts and their authors
+  $posts = Post::all();
+  foreach ($posts as $post) {
   echo $post->author->name;
-}
-```
+  }
+  ```
 
-**Solution**:
+  **Solution**:
 
-To avoid this, use Eloquent's `with()` method to eager load relationships, reducing the number of queries.
+  To avoid this, use Eloquent's `with()` method to eager load relationships, reducing the number of queries.
 
-```php
-// Eager loading to solve N+1 problem
-$posts = Post::with('author')->get();
-foreach ($posts as $post) {
-  echo $post->author->name;
-}
-```
+  ```php
+  // Eager loading to solve N+1 problem
+  $posts = Post::with('author')->get();
+  foreach ($posts as $post) {
+    echo $post->author->name;
+  }
+  ```
 
-Eager loading ensures related data is fetched in fewer queries, improving performance. problem in Laravel\*\*
+  Eager loading ensures related data is fetched in fewer queries, improving performance. problem in Laravel\*\*
 
 **Sources**
 
